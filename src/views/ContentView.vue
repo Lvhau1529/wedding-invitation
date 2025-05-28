@@ -1,5 +1,5 @@
 <template>
-  <div class="px-10 py-28">
+  <div class="px-16 py-28">
     <div class="flex justify-center">
       <div
         class="px-6 py-2 mb-4 text-xs tracking-widest text-orange-400 uppercase border border-orange-900 rounded-xl max-w-fit"
