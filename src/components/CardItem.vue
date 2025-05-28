@@ -1,6 +1,6 @@
 <template>
   <div ref="cardContainer">
-    <div ref="card" class="card py-7 px-5 rounded-2xl">
+    <div ref="card" class="card py-8 px-8 rounded-2xl">
       <slot />
     </div>
   </div>
