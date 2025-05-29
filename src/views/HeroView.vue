@@ -11,13 +11,13 @@
     <h1 class="hero__title max-w-[70%] mx-auto text-center text-7xl font-medium mb-8">
       Unlock the Full Potential of Your AI Models
     </h1>
-    <p class="text-center text-white text-xl max-w-2xl mx-auto mb-10">
+    <p class="hero__subtitle text-center text-xl max-w-2xl mx-auto mb-10">
       We develop cutting-edge AI training models to accelerate your innovation. Smarter, faster, and
       more efficient AI starts here.
     </p>
     <div class="flex justify-center">
       <button
-        class="text-white text-xl px-8 py-2 rounded-2xl border-2 border-orange-400 cursor-pointer hover:bg-orange-400"
+        class="text-xl px-8 py-2 rounded-2xl border-2 border-orange-400 cursor-pointer hover:bg-orange-400"
       >
         Get Started
       </button>
@@ -37,7 +37,39 @@
   import { gsap } from 'gsap'
   import { onMounted } from 'vue'
 
+  import { SplitText } from 'gsap/SplitText'
+  import { ScrambleTextPlugin } from 'gsap/ScrambleTextPlugin'
+
+  gsap.registerPlugin(SplitText)
+  gsap.registerPlugin(ScrambleTextPlugin)
+
   onMounted(() => {
+    const CHARS = '!1€5@#][6&$(=)£AF/&(234$$2N€O=(!@['
+
+    SplitText.create('.hero__subtitle', {
+      type: 'words, chars, lines',
+      onSplit(self) {
+        gsap.from(self.chars, {
+          duration: 1,
+          autoAlpha: 0,
+          stagger: 0.02,
+          ease: 'expo'
+        })
+      }
+    })
+
+    gsap.to('.hero__title', {
+      scrambleText: {
+        text: 'Unlock the Full Potential of Your AI Models',
+        chars: CHARS,
+        speed: 0.5,
+        delimiter: ' ',
+        tweenLength: false
+      },
+      duration: 3,
+      ease: 'expo'
+    })
+
     gsap.to('.hero__image', {
       rotate: 360,
       duration: 18,
