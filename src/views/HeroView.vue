@@ -1,5 +1,5 @@
 <template>
-  <div class="px-10 py-10">
+  <div class="px-16 py-10">
     <!-- Hero -->
     <div class="flex justify-center">
       <div
