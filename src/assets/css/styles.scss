@@ -1,13 +1,28 @@
+@use "./font.scss";
+@use "./color.scss";
+
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-serif);
 }
 
 html {
-  font-family: "Nunito Sans", sans-serif;
   box-sizing: border-box;
-  background-color: #000;
+  background-color: #fff;
+  color: var(--color-primary);
+  font-size: 16px;
 }
 
-.font-great-vibes {
-  font-family: "Great Vibes", cursive;
+.bg-img-gray {
+  background-image: url("@/assets/images/bg-save-the-date.jpg");
+  background-size: cover;
+  // background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.35));
+  z-index: 0;
+  pointer-events: none;
 }

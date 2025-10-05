@@ -1,1 +1,13 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-primary: rgb(63, 92, 132);
+  --font-great-vibes: 'Great Vibes', cursive;
+  --font-hastegi: 'Hastegi', cursive;
+  --font-arcittya-begatri: 'Arcititya Begatri', cursive;
+  --font-signature: 'Monsieur La Doulaise', cursive;
+  --font-serif: 'EB Garamond', serif;
+  --font-sans: 'Muli', sans-serif;
+  --font-prata: 'Prata', serif;
+  --font-cormorant-infant: 'Cormorant Infant', serif;
+}

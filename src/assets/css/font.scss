@@ -1,11 +1,187 @@
+/* ===========================
+   EB Garamond (serif font) main font
+=========================== */
 @font-face {
-  font-family: "Great Vibes";
-  src: url("../fonts//GreatVibes-Regular.ttf") format("truetype");
+  font-family: "EB Garamond";
+  src: url("/src/assets/fonts/EBGaramond-Regular.ttf") format("truetype");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/src/assets/fonts/EBGaramond-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/src/assets/fonts/EBGaramond-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/src/assets/fonts/EBGaramond-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/src/assets/fonts/EBGaramond-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/src/assets/fonts/EBGaramond-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/src/assets/fonts/EBGaramond-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/src/assets/fonts/EBGaramond-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/src/assets/fonts/EBGaramond-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: url("/src/assets/fonts/EBGaramond-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
 }
 
+/* ===========================
+   Muli (sans-serif font)
+=========================== */
 @font-face {
   font-family: "Muli";
-  src: url("../fonts/Muli-Regular.ttf") format("truetype");
+  src: url("/src/assets/fonts/Muli-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muli";
+  src: url("/src/assets/fonts/Muli-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muli";
+  src: url("/src/assets/fonts/Muli-Regular.ttf") format("truetype");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muli";
+  src: url("/src/assets/fonts/Muli-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ===========================
+   Script fonts (Decorative)
+=========================== */
+@font-face {
+  font-family: "Great Vibes";
+  src: url("/src/assets/fonts/GreatVibes-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Section title font
+@font-face {
+  font-family: "Monsieur La Doulaise";
+  src: url("/src/assets/fonts/MonsieurLaDoulaise-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Symbol font
+@font-face {
+  font-family: "Arcititya Begatri";
+  src: url("/src/assets/fonts/ArcittyaBegatri-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Main title font
+@font-face {
+  font-family: "Hastegi";
+  src: url("/src/assets/fonts/Hastegi-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===========================
+   Design Tokens (Tailwind)
+=========================== */
+:root {
+  /* Font chính cho tiêu đề */
+  --font-great-vibes: "Great Vibes", cursive;
+  --font-hastegi: "Hastegi", cursive;
+  --font-arcittya-begatri: "Arcititya Begatri", cursive;
+
+  /* Font chữ ký/lời chúc */
+  --font-signature: "Monsieur La Doulaise", cursive;
+
+  /* Font thân bài */
+  --font-serif: "EB Garamond", serif;
+  --font-sans: "Muli", sans-serif;
+  --font-prata: "Prata", serif;
+  --font-cormorant-infant: "Cormorant Infant", serif;
+}
+
+.font-great-vibes {
+  font-family: var(--font-great-vibes);
+}
+.font-hastegi {
+  font-family: var(--font-hastegi);
+}
+.font-arcittya-begatri {
+  font-family: var(--font-arcittya-begatri);
+}
+.font-signature {
+  font-family: var(--font-signature);
+}
+.font-serif {
+  font-family: var(--font-serif);
+}
+.font-sans {
+  font-family: var(--font-sans);
+}
+.font-prata {
+  font-family: var(--font-prata);
+}
+.font-cormorant-infant {
+  font-family: var(--font-cormorant-infant);
 }
