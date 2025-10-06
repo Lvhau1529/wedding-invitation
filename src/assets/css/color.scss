@@ -1,5 +1,14 @@
 :root {
   --color-primary: rgb(63, 92, 132);
+  --p-dialog-background: #ffffff;
+  --p-primary-color: rgb(63, 92, 132);
+}
+
+:root.app-dark {
+  --p-inputtext-focus-border-color: rgb(63, 92, 132) !important;
+  --p-textarea-focus-border-color: rgb(63, 92, 132) !important;
+  --p-select-focus-border-color: rgb(63, 92, 132) !important;
+  --p-primary-color: rgb(63, 92, 132);
 }
 
 .color-primary {

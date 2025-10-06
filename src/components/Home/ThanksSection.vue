@@ -1,7 +1,7 @@
 <template>
   <section class="bg-image h-[300px] relative">
     <div class="bg-overlay" />
-    <div class="p-8 h-full absolute text-center flex flex-col items-center justify-between">
+    <div class="px-6 py-8 h-full absolute text-center flex flex-col items-center justify-between">
       <p class="text-lg text-white">Cảm ơn bạn đã dành tình cảm cho chúng mình!</p>
       <p class="flex-1 text-lg text-white">
         Sự hiện diện của bạn chính là món quà ý nghĩa nhất, và chúng mình vô cùng trân quý khi được

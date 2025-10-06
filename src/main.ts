@@ -1,6 +1,23 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import PrimeVue from 'primevue/config'
+import Aura from '@primeuix/themes/aura'
+import ToastService from 'primevue/toastservice'
+import 'primeicons/primeicons.css'
 import '@/assets/css/index.scss'
 import '@/assets/css/tailwind.css'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+app
+  .use(PrimeVue, {
+    theme: {
+      preset: Aura,
+      options: {
+        darkModeSelector: '.app-dark',
+        cssLayer: false
+      }
+    }
+  })
+  .use(ToastService)
+  .mount('#app')

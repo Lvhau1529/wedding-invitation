@@ -1,5 +1,5 @@
 <template>
-  <div class="main__container">
+  <div class="main__container app-dark">
     <BannerSection />
     <SaveTheDateSection />
     <CalendarSection />
