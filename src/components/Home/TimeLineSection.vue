@@ -15,7 +15,7 @@
     </div>
 
     <div class="relative h-[580px] bg-img-gray pt-14">
-      <div class="px-10 mt-5">
+      <div class="px-8 mt-16">
         <template v-for="item in timeline" :key="item.id">
           <div class="flex items-center justify-center" :class="item.id === 3 ? '' : 'mb-10'">
             <div class="max-w-[60px]">
@@ -49,24 +49,28 @@
 </template>
 
 <script setup lang="ts">
+  import gate from '@/assets/images/gate-timeline.png'
+  import ring from '@/assets/images/proposal-ring-timeline.png'
+  import champagne from '@/assets/images/champagne-timeline.png'
+
   const timeline = [
     {
       id: 1,
-      img: 'src/assets/images/gate-timeline.png',
+      img: gate,
       time: '17:30',
       title: 'Đón khách',
       description: 'Checkin và gửi lời chúc phúc đến CDCR'
     },
     {
       id: 2,
-      img: 'src/assets/images/proposal-ring-timeline.png',
+      img: ring,
       time: '18:00',
       title: 'Lễ thành hôn',
       description: 'Cùng nhau chứng kiến khoảnh khắc thiêng liêng cùng CDCR'
     },
     {
       id: 3,
-      img: 'src/assets/images/champagne-timeline.png',
+      img: champagne,
       time: '18:15',
       title: 'Khai tiệc',
       description: 'Cùng nhau ăn tiệc và nâng ly chúc mừng CDCR'
