@@ -42,6 +42,7 @@
 <script setup lang="ts">
   import { computed, onMounted } from 'vue'
   import { gsap } from 'gsap'
+  import { useRoute } from 'vue-router'
 
   type Cell = {
     day: number
@@ -49,6 +50,10 @@
     isTarget: boolean
     key: string
   }
+
+  const route = useRoute()
+  const guest = route.query.guest as string
+  const calendarCells = computed<Cell[]>(() => buildMonthCells(2025, 10, guest === 'groom' ? 1 : 8))
 
   onMounted(() => {
     gsap.to('.bg-heart', {
@@ -104,10 +109,6 @@
 
     return cells
   }
-
-  // Tháng 11/2025, highlight ngày 1
-  const calendarCells = computed<Cell[]>(() => buildMonthCells(2025, 10, 1))
-  // monthIndex0=10 nghĩa là tháng 11
 </script>
 
 <style lang="scss" scoped>
