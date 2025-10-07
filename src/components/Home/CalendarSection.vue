@@ -1,7 +1,7 @@
 <template>
   <section class="calendar">
     <div class="px-8 py-14">
-      <h3 class="text-4xl font-signature text-center text-white mb-6">Tháng 11</h3>
+      <h3 class="month text-4xl font-signature text-center text-white mb-6">Tháng 11</h3>
 
       <!-- Header thứ trong tuần -->
       <div class="grid grid-cols-7 gap-2 mb-3">
@@ -19,13 +19,20 @@
         <div
           v-for="cell in calendarCells"
           :key="cell.key"
-          class="flex items-center justify-center"
+          class="flex items-center justify-center relative"
           :class="[
             cell.inCurrentMonth ? 'text-white' : 'text-gray-300',
-            cell.isTarget ? 'bg-heart text-center font-bold p-3' : ''
+            cell.isTarget ? 'text-center font-bold p-3' : ''
           ]"
         >
           {{ cell.day }}
+          <div v-if="cell.isTarget" class="bg-heart absolute top-1 left-0">
+            <img
+              src="@/assets/images/heart-calendar.png"
+              alt="heart"
+              class="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -33,7 +40,8 @@
 </template>
 
 <script setup lang="ts">
-  import { computed } from 'vue'
+  import { computed, onMounted } from 'vue'
+  import { gsap } from 'gsap'
 
   type Cell = {
     day: number
@@ -41,6 +49,16 @@
     isTarget: boolean
     key: string
   }
+
+  onMounted(() => {
+    gsap.to('.bg-heart', {
+      scale: 1.3,
+      duration: 1,
+      ease: 'power2.inOut',
+      yoyo: true,
+      repeat: -1
+    })
+  })
 
   // Thứ trong tuần: Mon -> Sun để khớp bố cục website
   const weekDays = ['mon', 'tue', 'wed', 'thur', 'fri', 'sat', 'sun']
@@ -96,12 +114,6 @@
   .calendar {
     background-image: url('@/assets/images/bg-calendar.jpg');
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .bg-heart {
-    background-image: url('@/assets/images/heart-calendar.png');
-    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
   }

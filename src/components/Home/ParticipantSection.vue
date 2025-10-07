@@ -4,7 +4,7 @@
       Hãy xác nhận sự có mặt của bạn để chúng mình chuẩn bị đón tiếp một cách chu đáo nhất. Trân
       trọng!
     </p>
-    <Toast />
+    <Toast position="top-center" />
     <Form v-slot="$form" :initial-values :resolver class="w-full" @submit="onFormSubmit">
       <div class="flex flex-col">
         <div class="mb-2">
@@ -74,7 +74,7 @@
         >
           <span class="uppercase font-medium">Gửi lời nhắn</span>
         </Button>
-        <Button type="submit" severity="secondary" raised class="w-full" @click="open = true">
+        <Button severity="secondary" raised class="w-full" @click="open = true">
           <span class="uppercase font-medium">Mừng cưới</span>
         </Button>
       </div>
@@ -110,10 +110,11 @@
   import Button from 'primevue/button'
   import { useToast } from 'primevue/usetoast'
   import { useGuestbook } from '@/composables/useGuestbook'
+  import { useRoute } from 'vue-router'
   import type { GuestbookEntryInput } from '@/types/guestbook'
 
   const { addEntry, submitting } = useGuestbook()
-
+  const route = useRoute()
   const toast = useToast()
 
   // State
@@ -125,7 +126,8 @@
   const initialValues = reactive<GuestbookEntryInput>({
     name: '',
     message: '',
-    willCome: null
+    willCome: null,
+    guest: route.query.guest as string
   })
   const isSubmitted = ref<boolean>(false)
 

@@ -159,6 +159,7 @@
   --font-sans: "Muli", sans-serif;
   --font-prata: "Prata", serif;
   --font-cormorant-infant: "Cormorant Infant", serif;
+  --font-roboto: "Roboto", sans-serif;
 }
 
 .font-great-vibes {
@@ -184,4 +185,7 @@
 }
 .font-cormorant-infant {
   font-family: var(--font-cormorant-infant);
+}
+.font-roboto {
+  font-family: var(--font-roboto);
 }
