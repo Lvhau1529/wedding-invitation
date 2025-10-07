@@ -44,7 +44,8 @@ export function useGuestbook() {
         name: input.name.trim(),
         message: input.message.trim(),
         willCome: input.willCome,
-        createdAt: serverTimestamp()
+        createdAt: serverTimestamp(),
+        guest: input.guest
       })
 
       return docRef.id

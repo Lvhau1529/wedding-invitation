@@ -8,10 +8,12 @@ export interface GuestbookEntry {
   message: string
   willCome?: WillCome | null
   createdAt: Timestamp | null
+  guest: string
 }
 
 export interface GuestbookEntryInput {
   name: string
   message: string
   willCome?: WillCome | null
+  guest: string
 }

@@ -21,7 +21,7 @@
             <div class="max-w-[60px]">
               <img class="object-cover w-full h-full" :src="item.img" :alt="item.title" />
             </div>
-            <p class="text-xl font-medium px-3.5">{{ item.time }}</p>
+            <p class="flex-shrink-0 text-xl font-medium px-3.5">{{ item.time }}</p>
             <div>
               <p class="uppercase font-medium">{{ item.title }}</p>
               <p>{{ item.description }}</p>

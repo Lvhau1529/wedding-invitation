@@ -35,7 +35,7 @@
     </div>
 
     <div class="flex items-center justify-center mt-8 relative">
-      <div class="text-center px-5">
+      <div class="text-center px-4">
         <p class="text-medium font-semibold uppercase mb-1">nhà trai</p>
         <div class="text-base">
           <p>Ông. Lê Mạnh Tiến</p>
@@ -43,7 +43,7 @@
           <p>TP. Hà Nội</p>
         </div>
       </div>
-      <div class="text-center px-5">
+      <div class="text-center px-4">
         <p class="text-medium font-semibold uppercase mb-1">nhà gái</p>
         <div class="text-base">
           <p>Ông. Nguyễn Tiên Phong</p>
