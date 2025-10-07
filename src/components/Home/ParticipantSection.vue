@@ -69,9 +69,10 @@
           variant="outlined"
           raised
           :loading="submitting"
-          :disabled="isSubmitted"
+          :disabled="isSubmitted || submitting"
           class="w-full mb-2"
         >
+          <i v-if="submitting" class="pi pi-spin pi-spinner"></i>
           <span class="uppercase font-medium">Gửi lời nhắn</span>
         </Button>
         <Button severity="secondary" raised class="w-full" @click="open = true">
