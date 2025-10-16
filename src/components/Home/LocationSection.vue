@@ -27,17 +27,20 @@
       <p class="text-center mt-2">Địa chỉ: {{ dataDetail.address }}</p>
     </div>
 
-    <a class="flex items-center justify-center mt-4" :href="dataDetail.map" target="_blank">
-      <div class="w-6 mr-1">
-        <img src="@/assets/images/pin-invitation.png" alt="wedding-ring" />
-      </div>
-      <p class="uppercase text-xl font-medium">Chỉ đường</p>
-    </a>
+    <div class="map-link">
+      <a class="flex items-center justify-center mt-4" :href="dataDetail.map" target="_blank">
+        <div class="w-6 mr-1">
+          <img src="@/assets/images/pin-invitation.png" alt="wedding-ring" />
+        </div>
+        <p class="uppercase text-xl font-medium">Chỉ đường</p>
+      </a>
+    </div>
   </section>
 </template>
 
 <script setup lang="ts">
-  import { computed } from 'vue'
+  import { computed, onMounted } from 'vue'
+  import { gsap } from 'gsap'
   import { useRoute } from 'vue-router'
 
   // Interface
@@ -89,6 +92,16 @@
     } else {
       return dataLocation.bride
     }
+  })
+
+  onMounted(() => {
+    gsap.to('.map-link', {
+      scale: 1,
+      duration: 1,
+      ease: 'power2.inOut',
+      yoyo: true,
+      repeat: -1
+    })
   })
 </script>
 <style scoped lang="scss">

@@ -9,11 +9,11 @@
       <p class="text-4xl font-cormorant-infant font-medium mb-6">
         {{ guest === 'groom' ? '01.11.2025' : '08.11.2025' }}
       </p>
-      <div class="w-full overflow-hidden rounded-md">
+      <div class="w-full h-[250px] overflow-hidden rounded-md">
         <img
-          src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="@/assets/images/save-the-date.JPG"
           alt="Ảnh cưới của cặp đôi"
-          class="w-full h-auto object-cover"
+          class="w-full h-full object-cover object-[0%_50%]"
         />
       </div>
     </div>

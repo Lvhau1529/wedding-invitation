@@ -16,9 +16,9 @@
     height: min(80vh, 900px);
     min-height: 420px;
     position: relative;
-    background-image: url('https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-image: url('@/assets/images/banner.JPG');
     background-size: cover;
-    background-position: center;
+    background-position: 70% 80%;
     background-repeat: no-repeat;
   }
 

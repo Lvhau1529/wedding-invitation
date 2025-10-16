@@ -1,62 +1,95 @@
 <template>
   <section class="bg-primary py-8 px-4">
     <div class="flex items-center">
-      <p class="text-white whitespace-nowrap text-5xl font-great-vibes mr-4">Our memories</p>
+      <p class="text-white whitespace-nowrap text-5xl font-great-vibes mr-4">
+        Kỷ niệm của chúng tôi
+      </p>
       <div class="w-full h-[1px] bg-white" />
     </div>
     <p class="text-white my-7">
-      This album captures the most beautiful moments of our special day—filled with love, joy, and
-      unforgettable memories. From our heartfelt vows to the first dance, every photo tells a story
-      of our journey together. Surrounded by family and friends, we celebrated a love that will last
-      a lifetime.
+      Album này ghi lại những khoảnh khắc đẹp nhất trong ngày đặc biệt của chúng tôi - tràn đầy tình
+      yêu, niềm vui và những kỷ niệm không thể nào quên. Từ lời thề nguyện chân thành đến điệu nhảy
+      đầu tiên, mỗi bức ảnh đều kể lại câu chuyện về hành trình của hai chúng tôi. Giữa vòng tay của
+      gia đình và bạn bè, chúng tôi đã cùng nhau đón mừng một tình yêu sẽ bền lâu suốt đời.
     </p>
 
     <div class="mb-3 h-72">
       <img
         class="w-full h-full object-cover"
-        src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        src="@/assets/images/IMG_7305.jpg"
         alt="flower-album"
       />
     </div>
 
-    <div class="grid grid-cols-2 grid-rows-2 gap-2 mb-3 h-80">
+    <div class="grid grid-cols-2 grid-rows-2 gap-2 mb-3 h-90">
       <div class="row-span-2">
         <img
-          class="w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          class="w-full h-full object-cover object-[70%_50%]"
+          src="@/assets/images/IMG_7342.jpg"
           alt="flower-album"
         />
       </div>
       <div>
         <img
           class="w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="@/assets/images/IMG_7368.jpg"
           alt="flower-album"
         />
       </div>
       <div class="col-start-2 row-start-2">
         <img
           class="w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src="@/assets/images/IMG_7442.jpg"
           alt="flower-album"
         />
       </div>
     </div>
 
     <div class="grid grid-cols-2 gap-2">
-      <template v-for="i in 4" :key="i">
-        <div :id="`album-${i}`" class="h-64">
-          <img
-            class="w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="flower-album"
-          />
+      <template v-for="item in albumRepresent" :key="item.id">
+        <div :id="`album-${item.id}`" class="h-64">
+          <img class="w-full h-full object-cover" :src="item.img" alt="flower-album" />
         </div>
       </template>
     </div>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import { ref } from 'vue'
+  import img1 from '@/assets/images/IMG_7598.jpg'
+  import img2 from '@/assets/images/IMG_7625.jpg'
+  import img3 from '@/assets/images/IMG_7655.jpg'
+  import img4 from '@/assets/images/IMG_7711.jpg'
+  import img5 from '@/assets/images/IMG_7720.jpg'
+  import img6 from '@/assets/images/IMG_7605.jpg'
+
+  const albumRepresent = ref([
+    {
+      id: 1,
+      img: img1
+    },
+    {
+      id: 2,
+      img: img2
+    },
+    {
+      id: 3,
+      img: img6
+    },
+    {
+      id: 4,
+      img: img3
+    },
+    {
+      id: 5,
+      img: img5
+    },
+    {
+      id: 6,
+      img: img4
+    }
+  ])
+</script>
 
 <style scoped lang="scss"></style>
