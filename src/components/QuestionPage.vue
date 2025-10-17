@@ -44,7 +44,6 @@
   ])
 
   const goToInvitation = () => {
-    console.log(selectedOption.value)
     if (selectedOption.value === '') {
       toast.add({
         severity: 'error',

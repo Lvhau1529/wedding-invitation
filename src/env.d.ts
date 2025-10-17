@@ -6,3 +6,10 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+declare module '*?url' {
+  const src: string
+  export default src
+}
+
+declare module '@lottiefiles/lottie-player'

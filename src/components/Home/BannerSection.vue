@@ -16,7 +16,7 @@
     height: min(80vh, 900px);
     min-height: 420px;
     position: relative;
-    background-image: url('@/assets/images/banner.JPG');
+    background-image: url('@/assets/images/banner.webp');
     background-size: cover;
     background-position: 70% 80%;
     background-repeat: no-repeat;
