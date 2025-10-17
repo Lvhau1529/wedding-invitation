@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-primary py-8 px-4">
+  <section class="bg-primary py-8 px-4 lazy-section">
     <div class="flex items-center">
       <p class="text-white whitespace-nowrap text-5xl font-great-vibes mr-4">
         Kỷ niệm của chúng tôi
@@ -16,8 +16,11 @@
     <div class="mb-3 h-72">
       <img
         class="w-full h-full object-cover"
-        src="@/assets/images/IMG_7305.jpg"
-        alt="flower-album"
+        :src="mainImage"
+        alt="Image"
+        loading="lazy"
+        decoding="async"
+        fetchpriority="low"
       />
     </div>
 
@@ -27,6 +30,9 @@
           class="w-full h-full object-cover object-[70%_50%]"
           src="@/assets/images/IMG_7342.jpg"
           alt="flower-album"
+          loading="lazy"
+          decoding="async"
+          fetchpriority="low"
         />
       </div>
       <div>
@@ -34,6 +40,9 @@
           class="w-full h-full object-cover"
           src="@/assets/images/IMG_7368.jpg"
           alt="flower-album"
+          loading="lazy"
+          decoding="async"
+          fetchpriority="low"
         />
       </div>
       <div class="col-start-2 row-start-2">
@@ -41,6 +50,9 @@
           class="w-full h-full object-cover"
           src="@/assets/images/IMG_7442.jpg"
           alt="flower-album"
+          loading="lazy"
+          decoding="async"
+          fetchpriority="low"
         />
       </div>
     </div>
@@ -48,7 +60,14 @@
     <div class="grid grid-cols-2 gap-2">
       <template v-for="item in albumRepresent" :key="item.id">
         <div :id="`album-${item.id}`" class="h-64">
-          <img class="w-full h-full object-cover" :src="item.img" alt="flower-album" />
+          <img
+            class="w-full h-full"
+            :src="item.img"
+            alt="album-image"
+            loading="lazy"
+            decoding="async"
+            fetchpriority="low"
+          />
         </div>
       </template>
     </div>
@@ -57,6 +76,7 @@
 
 <script setup lang="ts">
   import { ref } from 'vue'
+  import mainImage from '@/assets/images/IMG_7305.jpg'
   import img1 from '@/assets/images/IMG_7598.jpg'
   import img2 from '@/assets/images/IMG_7625.jpg'
   import img3 from '@/assets/images/IMG_7655.jpg'
@@ -92,4 +112,14 @@
   ])
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+  :deep(img) {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .lazy-section {
+    content-visibility: auto;
+    contain-intrinsic-size: 800px 600px;
+  }
+</style>

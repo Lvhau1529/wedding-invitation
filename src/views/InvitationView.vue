@@ -27,12 +27,30 @@
   import AlbumSection from '@/components/Home/AlbumSection.vue'
   import ParticipantSection from '@/components/Home/ParticipantSection.vue'
   import ThanksSection from '@/components/Home/ThanksSection.vue'
+  import heroBannerUrl from '@/assets/images/banner.webp'
 
   const loading = ref(true)
-  onMounted(() => {
-    setTimeout(() => {
-      loading.value = false
-    }, 3000)
+
+  function delay(ms: number) {
+    return new Promise<void>((resolve) => setTimeout(resolve, ms))
+  }
+
+  function preloadImage(url: string) {
+    return new Promise<void>((resolve) => {
+      const img = new Image()
+      img.onload = () => resolve()
+      img.onerror = () => resolve() // fail-safe: don't block forever
+      img.src = url
+    })
+  }
+
+  onMounted(async () => {
+    // Ensure the hero banner is in cache before we hide the preloader
+    await Promise.all([
+      preloadImage(heroBannerUrl),
+      delay(1200) // let lottie play briefly for UX; adjust as desired
+    ])
+    loading.value = false
   })
 </script>
 

@@ -20,6 +20,8 @@
     background-size: cover;
     background-position: 70% 80%;
     background-repeat: no-repeat;
+    content-visibility: auto; /* avoid rendering offscreen hero content */
+    contain-intrinsic-size: 900px 600px; /* reserve size to prevent layout jank */
   }
 
   /* gradient dưới giúp chữ nổi bật hơn */

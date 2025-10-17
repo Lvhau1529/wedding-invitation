@@ -10,11 +10,12 @@
 </template>
 
 <script setup lang="ts">
-  import lottieUrl from '@/assets/lottie/weddingfloral.json?url'
+  import lottieUrl from '@/assets/lottie/weddingfloral.json'
 </script>
 
 <style scoped lang="scss">
   .preloader-page {
     height: 100vh;
+    content-visibility: auto;
   }
 </style>
