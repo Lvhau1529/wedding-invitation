@@ -18,7 +18,7 @@
         <div class="absolute w-[176px] h-[200px] top-[32px] left-[44px] rotate-[-9deg]">
           <img
             class="w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="@/assets/images/LEW02546.jpg"
             alt="frame left"
           />
         </div>
@@ -27,7 +27,7 @@
         <div class="absolute w-[176px] h-[200px] top-[32px] right-[48px] rotate-[9deg]">
           <img
             class="w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1606800052052-a08af7148866?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="@/assets/images/LEW02517.jpg"
             alt="frame right"
           />
         </div>
@@ -72,5 +72,13 @@
   }
   .frame-right {
     background-image: url('@/assets/images/frame-right-invitation.png');
+  }
+  :deep(img) {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: -webkit-optimize-contrast;
   }
 </style>

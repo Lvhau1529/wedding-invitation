@@ -16,9 +16,9 @@
     height: min(80vh, 900px);
     min-height: 420px;
     position: relative;
-    background-image: url('@/assets/images/banner.webp');
+    background-image: url('@/assets/images/LEW02374.webp');
     background-size: cover;
-    background-position: 70% 80%;
+    background-position: 60% 50%;
     background-repeat: no-repeat;
     content-visibility: auto; /* avoid rendering offscreen hero content */
     contain-intrinsic-size: 900px 600px; /* reserve size to prevent layout jank */
