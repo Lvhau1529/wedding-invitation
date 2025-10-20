@@ -10,42 +10,25 @@
     </p>
 
     <div class="mb-3 h-72">
-      <img
-        class="w-full h-full object-cover"
-        :src="mainImage"
-        alt="Image"
-        loading="lazy"
-        decoding="async"
-        fetchpriority="low"
-      />
+      <img class="w-full h-full object-cover object-[60%_30%]" :src="mainImage" alt="main-album" />
     </div>
 
     <div class="grid grid-cols-2 grid-rows-2 gap-2 mb-3 h-90">
       <div class="row-span-2">
         <img
           v-lazy="subImage1"
-          class="w-full h-full object-cover object-[70%_50%]"
-          alt="flower-album"
+          class="w-full h-full object-cover object-[60%_50%]"
+          alt="sub-album-1"
         />
       </div>
       <div>
-        <img
-          v-lazy="subImage2"
-          class="w-full h-full object-cover"
-          alt="flower-album"
-          loading="lazy"
-          decoding="async"
-          fetchpriority="low"
-        />
+        <img v-lazy="subImage2" class="w-full h-full object-cover" alt="sub-album-2" />
       </div>
       <div class="col-start-2 row-start-2">
         <img
           v-lazy="subImage3"
-          class="w-full h-full object-cover"
-          alt="flower-album"
-          loading="lazy"
-          decoding="async"
-          fetchpriority="low"
+          class="w-full h-full object-cover object-[20%_20%]"
+          alt="sub-album-3"
         />
       </div>
     </div>
@@ -62,18 +45,18 @@
 
 <script setup lang="ts">
   import { ref } from 'vue'
-  import mainImage from '@/assets/images/LEW02189.jpg'
-  import subImage1 from '@/assets/images/LEW02194.jpg'
-  import subImage2 from '@/assets/images/LEW02331.jpg'
-  import subImage3 from '@/assets/images/LEW02349.jpg'
-  import img1 from '@/assets/images/LEW02378.jpg'
-  import img2 from '@/assets/images/LEW02486.jpg'
-  import img3 from '@/assets/images/LEW02507.jpg'
-  import img4 from '@/assets/images/LEW02529.jpg'
-  import img5 from '@/assets/images/LEW02646.jpg'
-  import img6 from '@/assets/images/LEW02672.jpg'
-  import img7 from '@/assets/images/LEW02696.jpg'
-  import img8 from '@/assets/images/LEW02701.jpg'
+  import mainImage from '@/assets/images/LEW02189.webp'
+  import subImage1 from '@/assets/images/LEW02194.webp'
+  import subImage2 from '@/assets/images/LEW02331.webp'
+  import subImage3 from '@/assets/images/LEW02349.webp'
+  import img1 from '@/assets/images/LEW02378.webp'
+  import img2 from '@/assets/images/LEW02486.webp'
+  import img3 from '@/assets/images/LEW02507.webp'
+  import img4 from '@/assets/images/LEW02529.webp'
+  import img5 from '@/assets/images/LEW02646.webp'
+  import img6 from '@/assets/images/LEW02672.webp'
+  import img7 from '@/assets/images/LEW02696.webp'
+  import img8 from '@/assets/images/LEW02701.webp'
 
   const albumRepresent = ref([
     {
@@ -111,17 +94,3 @@
   ])
 </script>
 
-<style scoped lang="scss">
-  :deep(img) {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    image-rendering: -webkit-optimize-contrast;
-  }
-  .lazy-section {
-    content-visibility: auto;
-    contain-intrinsic-size: 800px 600px;
-  }
-</style>

@@ -1,7 +1,7 @@
 <template>
   <div class="pb-8">
     <div class="h-[420px] relative">
-      <img src="@/assets/images/timeline.JPG" alt="flower" class="w-full h-full object-cover" />
+      <img src="@/assets/images/timeline.webp" alt="flower" class="w-full h-full object-cover" />
       <p
         class="text-center text-4xl text-white font-prata absolute bottom-3 left-1/2 -translate-x-1/2 z-1 italic"
       >

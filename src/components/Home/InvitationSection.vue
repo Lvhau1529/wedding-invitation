@@ -18,7 +18,7 @@
         <div class="absolute w-[176px] h-[200px] top-[32px] left-[44px] rotate-[-9deg]">
           <img
             class="w-full h-full object-cover"
-            src="@/assets/images/LEW02546.jpg"
+            src="@/assets/images/LEW02546.webp"
             alt="frame left"
           />
         </div>
@@ -27,7 +27,7 @@
         <div class="absolute w-[176px] h-[200px] top-[32px] right-[48px] rotate-[9deg]">
           <img
             class="w-full h-full object-cover"
-            src="@/assets/images/LEW02517.jpg"
+            src="@/assets/images/LEW02517.webp"
             alt="frame right"
           />
         </div>
