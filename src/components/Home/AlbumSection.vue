@@ -10,23 +10,27 @@
     </p>
 
     <div class="mb-3 h-72">
-      <img class="w-full h-full object-cover object-[50%_25%]" :src="mainImage" alt="main-album" />
+      <img
+        v-lazy="mainImage"
+        class="w-full h-full object-cover object-[50%_25%]"
+        alt="main-album"
+      />
     </div>
 
     <div class="grid grid-cols-2 grid-rows-2 gap-2 mb-3 h-90">
       <div class="row-span-2">
         <img
-          :src="subImage1"
+          v-lazy="subImage1"
           class="w-full h-full object-cover object-[60%_50%]"
           alt="sub-album-1"
         />
       </div>
       <div>
-        <img :src="subImage2" class="w-full h-full object-cover" alt="sub-album-2" />
+        <img v-lazy="subImage2" class="w-full h-full object-cover" alt="sub-album-2" />
       </div>
       <div class="col-start-2 row-start-2">
         <img
-          :src="subImage3"
+          v-lazy="subImage3"
           class="w-full h-full object-cover object-[20%_20%]"
           alt="sub-album-3"
         />
@@ -37,10 +41,10 @@
       <template v-for="item in albumRepresent" :key="item.id">
         <div :id="`album-${item.id}`" class="h-64">
           <img
-            :src="item.img"
+            v-lazy="item.img"
             class="w-full h-full object-cover"
             :class="item.className"
-            alt="album-image"
+            :alt="`album-image-${item.id}`"
           />
         </div>
       </template>
