@@ -4,6 +4,7 @@ import router from './router'
 import PrimeVue from 'primevue/config'
 import Aura from '@primeuix/themes/aura'
 import ToastService from 'primevue/toastservice'
+import ConfirmationService from 'primevue/confirmationservice'
 import VueLazyload from 'vue-lazyload'
 import '@lottiefiles/lottie-player'
 import 'primeicons/primeicons.css'
@@ -24,6 +25,7 @@ app
     }
   })
   .use(ToastService)
+  .use(ConfirmationService)
   .use(VueLazyload, {
     loading: loadingImage,
     observer: true,
