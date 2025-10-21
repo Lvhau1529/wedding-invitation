@@ -73,7 +73,7 @@
       map: 'https://maps.app.goo.gl/nUgyHoFQor7gEQUb8'
     },
     bride: {
-      ceremony: 'lễ vu quy được tổ chức vào lúc 18 giờ',
+      ceremony: 'lễ vu quy được tổ chức vào lúc 11 giờ',
       month: 'Tháng 11',
       dayOfWeek: 'Thứ bảy',
       day: '08',
