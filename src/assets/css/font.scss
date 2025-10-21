@@ -109,7 +109,7 @@
 =========================== */
 @font-face {
   font-family: "Great Vibes";
-  src: url("/src/assets/fonts/GreatVibes-Regular.ttf") format("truetype");
+  src: url("/src/assets/fonts/GreatVibes-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -124,44 +124,42 @@
   font-display: swap;
 }
 
-// Symbol font - temporarily disabled due to OTS parsing error
-// @font-face {
-//   font-family: "Arcititya Begatri";
-//   src: url("/src/assets/fonts/ArcittyaBegatri-Regular.otf") format("opentype");
-//   font-weight: 400;
-//   font-style: normal;
-//   font-display: swap;
-//   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-// }
+// Symbol font
+@font-face {
+  font-family: "Arcititya Begatri";
+  src: url("/src/assets/fonts/ArcittyaBegatri-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-// Main title font - temporarily disabled due to OTS parsing error
-// @font-face {
-//   font-family: "Hastegi";
-//   src: url("/src/assets/fonts/Hastegi-Regular.otf") format("opentype");
-//   font-weight: 400;
-//   font-style: normal;
-//   font-display: swap;
-//   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-// }
+// Main title font
+@font-face {
+  font-family: "Hastegi";
+  src: url("/src/assets/fonts/Hastegi-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* ===========================
    Design Tokens (Tailwind)
 =========================== */
 :root {
-  /* Font chính cho tiêu đề với fallback */
-  --font-great-vibes: "Great Vibes", "Brush Script MT", cursive;
-  --font-hastegi: "Hastegi", "Brush Script MT", cursive;
-  --font-arcittya-begatri: "Arcititya Begatri", "Brush Script MT", cursive;
+  /* Font chính cho tiêu đề */
+  --font-great-vibes: "Great Vibes", cursive;
+  --font-hastegi: "Hastegi", cursive;
+  --font-arcittya-begatri: "Arcititya Begatri", cursive;
 
-  /* Font chữ ký/lời chúc với fallback */
-  --font-signature: "Monsieur La Doulaise", "Brush Script MT", cursive;
+  /* Font chữ ký/lời chúc */
+  --font-signature: "Monsieur La Doulaise", cursive;
 
-  /* Font thân bài với fallback */
-  --font-serif: "EB Garamond", "Times New Roman", serif;
-  --font-sans: "Muli", "Arial", sans-serif;
-  --font-prata: "Prata", "Times New Roman", serif;
-  --font-cormorant-infant: "Cormorant Infant", "Times New Roman", serif;
-  --font-roboto: "Roboto", "Arial", sans-serif;
+  /* Font thân bài */
+  --font-serif: "EB Garamond", serif;
+  --font-sans: "Muli", sans-serif;
+  --font-prata: "Prata", serif;
+  --font-cormorant-infant: "Cormorant Infant", serif;
+  --font-roboto: "Roboto", sans-serif;
 }
 
 .font-great-vibes {
