@@ -27,16 +27,16 @@
   import AlbumSection from '@/components/Home/AlbumSection.vue'
   import ParticipantSection from '@/components/Home/ParticipantSection.vue'
   import ThanksSection from '@/components/Home/ThanksSection.vue'
-  import heroBannerUrl from '@/assets/images/banner.webp'
+  import heroBannerUrl from '@/assets/images/LEW02374.webp'
 
   const loading = ref(true)
 
   function delay(ms: number) {
-    return new Promise<void>((resolve) => setTimeout(resolve, ms))
+    return new Promise<void>(resolve => setTimeout(resolve, ms))
   }
 
   function preloadImage(url: string) {
-    return new Promise<void>((resolve) => {
+    return new Promise<void>(resolve => {
       const img = new Image()
       img.onload = () => resolve()
       img.onerror = () => resolve() // fail-safe: don't block forever

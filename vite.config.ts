@@ -5,7 +5,17 @@ import tailwindcss from '@tailwindcss/vite'
 import { imagetools } from 'vite-imagetools'
 
 export default defineConfig({
-  plugins: [vue(), tailwindcss(), imagetools()],
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: tag => tag === 'lottie-player'
+        }
+      }
+    }),
+    tailwindcss(),
+    imagetools()
+  ],
   resolve: {
     alias: {
       '@': resolve(__dirname, './src')
@@ -17,5 +27,8 @@ export default defineConfig({
   build: {
     assetsInlineLimit: 0,
     cssMinify: 'lightningcss'
+  },
+  optimizeDeps: {
+    exclude: ['@lottiefiles/lottie-player']
   }
 })

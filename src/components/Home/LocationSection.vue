@@ -39,7 +39,7 @@
 </template>
 
 <script setup lang="ts">
-  import { computed, onMounted } from 'vue'
+  import { computed, nextTick, onMounted } from 'vue'
   import { gsap } from 'gsap'
   import { useRoute } from 'vue-router'
 
@@ -94,7 +94,8 @@
     }
   })
 
-  onMounted(() => {
+  onMounted(async () => {
+    await nextTick()
     gsap.to('.map-link', {
       scale: 1,
       duration: 1,

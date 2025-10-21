@@ -40,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-  import { computed, onMounted } from 'vue'
+  import { computed, nextTick, onMounted } from 'vue'
   import { gsap } from 'gsap'
   import { useRoute } from 'vue-router'
 
@@ -55,7 +55,8 @@
   const guest = route.query.guest as string
   const calendarCells = computed<Cell[]>(() => buildMonthCells(2025, 10, guest === 'groom' ? 1 : 8))
 
-  onMounted(() => {
+  onMounted(async () => {
+    await nextTick()
     gsap.to('.bg-heart', {
       scale: 1.3,
       duration: 1,
